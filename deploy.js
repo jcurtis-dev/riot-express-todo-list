@@ -49,7 +49,7 @@ function transferProjectToRemote(failed, successful) {
 // creates a temporary folder on the remote server
 function createRemoteTempFolder() {
   return ssh.execCommand(
-     'mkdir deployment-handson-three-temp', {
+    'rm -rf deployment-handson-three-temp && mkdir deployment-handson-three-temp', {
       cwd: '/home/ubuntu'
   });
 }
